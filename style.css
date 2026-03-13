@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#toolbar {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: #1e1e1e;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#urlInput {
+  flex: 1;
+  padding: 6px 10px;
+}
