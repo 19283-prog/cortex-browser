@@ -1,30 +1,23 @@
-window.onload = () => {
+function go() {
 
-const browser = document.getElementById("browserView");
-const urlInput = document.getElementById("urlInput");
+let input = document.getElementById("urlInput").value.trim()
 
-document.getElementById("goBtn").onclick = () => {
+if(input.includes(".") && !input.includes(" ")){
 
-let url = urlInput.value;
+let url = input
 
-if (!url.startsWith("http")) {
-url = "https://" + url;
+if(!url.startsWith("http")){
+url = "https://" + url
 }
 
-browser.src = url;
+window.open(url,"_blank")
 
-};
+}else{
 
-document.getElementById("backBtn").onclick = () => {
-if (browser.canGoBack()) browser.goBack();
-};
+let search="https://www.google.com/search?q="+encodeURIComponent(input)
 
-document.getElementById("forwardBtn").onclick = () => {
-if (browser.canGoForward()) browser.goForward();
-};
+window.open(search,"_blank")
 
-document.getElementById("refreshBtn").onclick = () => {
-browser.reload();
-};
+}
 
-};
+}
